@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>Kanban Board</title>
+</head>
+
+<body>
+
+    <div class="container-1">
+
+        <nav>
+            <div class="nav-bar">
+                <img src="logo/logo-light.svg" alt="kanban-logo" class="logo">
+                <h1>All Boards (1)</h1>
+                <button class="launch-btn">Launch Career</button>
+            </div>
+        </nav>
+
+        <div class="main-section">
+
+            <div class="header-section">
+
+                <img src="logo/favicon.svg" class="favicon">
+
+                <h1>Launch Career</h1>
+
+                <button id="create-task-btn">Create Task +</button>
+
+            </div>
+
+            <div class="content-section">
+
+                <div  id="todo-column" class="to-do">
+
+                    <h4>TODO (4)</h4>
+
+                </div>
+
+                <div id="doing-column" class="doing">
+
+                    <h4>DOING (3)</h4>
+
+                </div>
+
+                <div id="done-column" class="done">
+
+                    <h4>DONE (3)</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+ 
+    <div class ="modal-wrapper">
+
+        <div class ="modal-card">
+
+            <div class="title-btn">
+                <h4>This is a Task</h4>
+                <button id="close-btn">X</button>
+            </div>
+
+            <h4 id="task-header">Title</h4>
+
+            <input id="title-input" type="text" placeholder="e.g take chilled break">
+
+            <h4 id="task-description">Description</h4>
+
+            <input id="description-input" type="text" placeholder="e.g take a warm bath">
+
+            <h4 id="task-status">Status</h4>
+
+            <div class="dropdown">
+
+                <select id="select" >
+
+                    
+                    <div class="caret"></div>
+                    <option value="todo">todo</option>
+                    <option value="doing">doing</option>
+                    <option value="done">done</option>
+
+                </select>
+
+            </div>
+
+        </div>   
+
+    </div>
+
+
+    <div class ="newTask-modal-wrapper">
+
+        <div class ="newTask-modal-card">
+
+            <div class="title-btn">
+                <h4>Add New Task</h4>
+                <button id="new-close-btn">X</button>
+            </div>
+
+            <h4 id="task-header">Title</h4>
+
+            <input id="new-title-input" type="text" placeholder="e.g take chilled break">
+
+            <h4 id="task-description">Description</h4>
+
+            <input id="new-description-input" type="text" placeholder="e.g take a warm bath">
+
+            <h4 id="task-status">Status</h4>
+
+            <div class="new-dropdown">
+
+                <select id="new-select">
+
+                    <div class="caret"></div>
+                    <option value="todo">todo</option>
+                    <option value="doing">doing</option>
+                    <option value="done">done</option>
+
+                </select>
+
+            </div>
+
+            <button id="new-task-btn">Create Task</button>
+
+        </div>   
+
+    </div>
+
+    <script src="index.js" type="module"></script>
+
+</body>
+
+</html>
