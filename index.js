@@ -92,7 +92,30 @@ newTaskBtn.addEventListener("click", function () {
   closeAndResetModal();
 });
 
+// Fetch Data from API
 
-document.addEventListener("DOMContentLoaded", () => {
+const apiUrl = "https://jsl-kanban-api.vercel.app/"
+
+async function apiData() {
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+    if (!tasks) {
+        try {
+            const response = await fetch(apiUrl);
+                tasks = await response.json();
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        } catch (err) {
+            console.error("Error fetching tasks from API:", err);
+            return;
+        }
+    }
+
+    tasks.forEach(task => addTaskToBoard(task));
+}
+
+window.addEventListener("DOMContentLoaded", apiData);
+
+
+/*document.addEventListener("DOMContentLoaded", () => {
   loadTaskFromLocalStorage();
-});
+});*/
