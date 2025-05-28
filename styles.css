@@ -237,6 +237,34 @@ body{
     transform: rotate(180deg);
 }
 
+/* Modal Save and Delete Buttons*/
+
+.save-delete-btns{
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+#save-changes-btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #635fc7;
+    color: white;
+    cursor: pointer;
+}
+
+#delete-btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ea5555;
+    color: white;
+    cursor: pointer; 
+}
+
 /* New task modal*/
 
 .newTask-modal-card{
