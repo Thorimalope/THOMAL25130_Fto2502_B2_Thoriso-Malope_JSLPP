@@ -1,3 +1,22 @@
+:root {
+  --bg-body: #f4f7fd;
+  --bg-sidebar: white;
+  --bg-header: white;
+  --bg-card: white;
+  --bg-modal: white;
+  --bg-select-hover: #828fa3;
+  --bg-primary: #635fc7;
+  --bg-danger: #ea5555;
+  --bg-switch: #F4F7FD;
+  
+  --text-primary: #000000;
+  --text-secondary: #828fa3;
+  --text-inverse: white;
+  --text-danger: red;
+
+  --box-shadow-card: 0px 4px 6px rgba(54, 78, 126, 0.1);
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -5,7 +24,7 @@
 }
 
 body{
-    background: #f4f7fd;
+    background: var(--bg-body);
 }
 
 .container-1{
@@ -13,13 +32,13 @@ body{
 }
 
 .nav-bar{
-    background: white;
+    background: var(--bg-sidebar);
     height: 1024px;
     width: 300px;
 }
 
 .nav-bar h1{
-    color: #828fa3;
+    color: var(--text-secondary);
     font-family: plus jakarta sans;
     font-size: 12px;
     font-weight: 700;
@@ -30,21 +49,21 @@ body{
 .launch-btn{
     width: 276px;
     height: 48px;
-    background: #635fc7;
+    background: var(--bg-primary);
     border: none;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     font-family: plus jakarta sans;
     font-size: 15px;
     font-weight: 700;
-    color: white;
+    color: var(--text-inverse);
     margin-top: 20px;
 }
 
 /* Header Section*/
 
 .header-section{
-    background: white;
+    background: var(--bg-header);
     height: 96px;
     width: 1220px;
     display: flex;
@@ -56,15 +75,16 @@ body{
     font-size: 24px;
     margin-top: 30px;
     margin-left: 30px;
+    color: var(--text-primary)
 }
 
 #create-task-btn{
     width: 164px;
     height: 48px;
-    background: #635fc7;
+    background: var(--bg-primary);
     border: none;
     border-radius: 24px;
-    color: white;
+    color: var(--text-inverse);
     margin-top: 20px;
     margin-left: 8px;
     cursor: pointer;
@@ -72,7 +92,7 @@ body{
 }
 
 #create-task-btn:hover{
-    background-color: #828fa3;
+    background-color: var(--bg-select-hover);
 }
 
 /* Content */
@@ -93,7 +113,7 @@ body{
     font-family: plus jakarta sans;
     font-size: 12px;
     font-weight: 700;
-    color:#828fa3;
+    color: var(--text-secondary);
 }
 
 .card{
@@ -102,10 +122,10 @@ body{
     font-weight: 700;
     width: 280px;
     height: 60px;
-    background: white;
+    background: var(--bg-card);
     border-radius: 8px;
     margin-top: 20px;
-    box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.1);
+    box-shadow: var(--box-shadow-card);
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -115,7 +135,8 @@ body{
 }
 
 .card:hover{
-    background-color: #635fc7;
+  background-color: var(--bg-primary);
+  color: var(--text-inverse);
 }
 
 .logo{
@@ -133,16 +154,17 @@ body{
 /* Modal Card */ 
 
 .modal-card{
-    width: 479px;
-    height: 479px;
-    background-color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 20px;
+  width: 479px;
+  height: 479px;
+  background-color: var(--bg-modal);
+  border: none;
+  border-radius: 6px;
+  padding: 20px;
+  color: var(--text-primary);
 }
 
 .modal-wrapper{
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     left: 0;
@@ -169,39 +191,41 @@ body{
 #close-btn{
     margin-left: 340px;
     border: none;
-    background-color: white;
+    background-color: var(--bg-modal);
     font-size: 18px;
-    color: red;
+    color: var(--text-danger);
     transition: color 0.2s;
     cursor: pointer;
 }
 
 #close-btn:hover{
-    color: #828fa3;
+    color: var(--text-secondary);
 }
 
 #title-input{
     width: 424px;
     height: 40px;
-    border: 1px solid #828fa3;
+    border: 1px solid var(--text-secondary);
     border-radius: 4px;
     margin-top: 5px;
     margin-bottom: 20px;
     padding-left: 20px;
+    color: var(--text-primary);
 }
 
 #description-input{
     width: 424px;
     height: 112px;
-    border: 1px solid #828fa3;
+    border: 1px solid var(--text-secondary);
     border-radius: 4px;
     margin-top: 5px;
     margin-bottom: 20px;
     padding-left: 20px;
+    color: var(--text-primary);
 }
 
 #select{
-    border: 1px solid #828fa3;
+    border: 1px solid var(--text-secondary);
     width: 424px;
     height: 40px;
     border-radius: 4px;
@@ -212,6 +236,7 @@ body{
     align-items: center;
     cursor: pointer;
     transition: background 0.3s;
+    color: var(--text-primary);
 }
 
 #select-clicked{
@@ -220,7 +245,7 @@ body{
 }
 
 #select:hover{
-    background-color: #828fa3;
+    background-color: var(--bg-select-hover);
 }
 
 .caret{
@@ -250,8 +275,8 @@ body{
     height: 40px;
     border: none;
     border-radius: 20px;
-    background-color: #635fc7;
-    color: white;
+    background-color: var(--bg-primary);
+    color: var(--text-inverse);
     cursor: pointer;
 }
 
@@ -260,20 +285,21 @@ body{
     height: 40px;
     border: none;
     border-radius: 20px;
-    background-color: #ea5555;
-    color: white;
+    background-color: var(--bg-danger);
+    color: var(--text-inverse);
     cursor: pointer; 
 }
 
 /* New task modal*/
 
 .newTask-modal-card{
-    width: 479px;
-    height: 479px;
-    background-color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 20px;
+  width: 479px;
+  height: 479px;
+  background-color: var(--bg-modal);
+  border: none;
+  border-radius: 6px;
+  padding: 20px;
+  color: var(--text-primary);
 }
 
 .newTask-modal-wrapper{
@@ -292,39 +318,41 @@ body{
 #new-close-btn{
     margin-left: 340px;
     border: none;
-    background-color: white;
+    background-color: var(--bg-modal);
     font-size: 18px;
-    color: red;
+    color: var(--text-danger);
     transition: color 0.2s;
     cursor: pointer;
 }
 
 #new-close-btn:hover{
-    color: #828fa3;
+    color: var(--text-secondary);
 }
 
 #new-title-input{
     width: 424px;
     height: 40px;
-    border: 1px solid #828fa3;
+    border: 1px solid var(--text-secondary);
     border-radius: 4px;
     margin-top: 5px;
     margin-bottom: 20px;
     padding-left: 20px;
+    color: var(--text-primary);
 }
 
 #new-description-input{
     width: 424px;
     height: 112px;
-    border: 1px solid #828fa3;
+    border: 1px solid var(--text-secondary);
     border-radius: 4px;
     margin-top: 5px;
     margin-bottom: 20px;
     padding-left: 20px;
+    color: var(--text-primary);
 }
 
 #new-select{
-    border: 1px solid #828fa3;
+    border: 1px solid var(--text-secondary);
     width: 424px;
     height: 40px;
     border-radius: 4px;
@@ -335,6 +363,7 @@ body{
     align-items: center;
     cursor: pointer;
     transition: background 0.3s;
+    color: var(--text-primary);
 }
 
 #new-select-clicked{
@@ -343,7 +372,7 @@ body{
 }
 
 #new-select:hover{
-    background-color: #828fa3;
+    background-color: var(--bg-select-hover);
 }
 
 #new-task-btn{
@@ -351,15 +380,15 @@ body{
     height: 40px;
     border: none;
     border-radius: 20px;
-    color: white;
-    background-color: #635fc7;
+    color: var(--text-inverse);
+    background-color: var(--bg-primary);
     margin-top: 40px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 #new-task-btn:hover{
-    background-color: #828fa3;
+    background-color: var(--bg-select-hover);
 }
 
 /* Theme Switch Button*/
@@ -370,10 +399,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     position: relative;
     border: none;
     border-radius: 6px;
-    background-color: #F4F7FD;
+    background-color: var(--bg-switch);
     margin-top: 380px;
     margin-left: 22px;
 }
@@ -395,7 +425,7 @@ body{
     width: 40px;
     height: 20px;
     border-radius: 12px;
-    background-color: #635fc7;
+    background-color: var(--bg-primary);
     transition: background 0.2s;
 }
 
