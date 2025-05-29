@@ -13,8 +13,29 @@
   --text-secondary: #828fa3;
   --text-inverse: white;
   --text-danger: red;
+  --text-cardHeader: black;
 
   --box-shadow-card: 0px 4px 6px rgba(54, 78, 126, 0.1);
+}
+
+body.dark-theme {
+  --bg-body: #20212c;
+  --bg-sidebar: #2b2c37;
+  --bg-header: #2b2c37;
+  --bg-card: #2b2c37;
+  --bg-modal: #2b2c37;
+  --bg-select-hover: #3e3f4e;
+  --bg-primary: #635fc7;
+  --bg-danger: #ea5555;
+  --bg-switch: #20212c;
+
+  --text-primary: rgb(0, 0, 0);
+  --text-secondary: #828fa3;
+  --text-inverse: white;
+  --text-danger: red;
+  --text-cardHeader: white;
+
+  --box-shadow-card: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 *{
@@ -75,7 +96,7 @@ body{
     font-size: 24px;
     margin-top: 30px;
     margin-left: 30px;
-    color: var(--text-primary)
+    color: var(--text-cardHeader);
 }
 
 #create-task-btn{
@@ -123,6 +144,7 @@ body{
     width: 280px;
     height: 60px;
     background: var(--bg-card);
+    color: var(--text-cardHeader);
     border-radius: 8px;
     margin-top: 20px;
     box-shadow: var(--box-shadow-card);

@@ -178,3 +178,16 @@ deleteButton.addEventListener("click", function () {
   }
 
 })
+
+// Toggle Theme function
+
+const toggleButton = document.getElementById("my-toggle");
+const projectBody = document.getElementById("body");
+
+toggleButton.addEventListener("change", function () {
+  if (toggleButton.checked) {
+    body.classList.add("dark-theme");
+  } else {
+    body.classList.remove("dark-theme");
+  }
+})
