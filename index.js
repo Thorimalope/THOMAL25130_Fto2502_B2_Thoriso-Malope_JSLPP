@@ -162,11 +162,19 @@ saveButton.addEventListener("click", function () {
 const deleteButton = document.getElementById("delete-btn");
 
 deleteButton.addEventListener("click", function () {
-  const taskId = parseInt(card.dataset.id);
   if (confirm("Are you sure you want to delete?")) {
-    card.remove();
-  } else {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks = tasks.filter(task => task.id !== currentTaskId);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+    const cardToRemove = document.querySelector(`.card[data-id="${currentTaskId}"]`);
+    if (cardToRemove) {
+      cardToRemove.remove();
+    }
+
     document.querySelector(".modal-wrapper").style.display = "none";
+  } else {
+    deleteButton = null;
   }
 
 })
