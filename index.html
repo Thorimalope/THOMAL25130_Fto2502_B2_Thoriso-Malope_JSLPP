@@ -15,7 +15,7 @@
     <div class="container-1">
 
         <nav>
-            
+
             <div class="nav-bar">
 
                 <img src="logo/logo-light.svg" alt="kanban-logo" class="logo">
@@ -29,8 +29,8 @@
                     <p>☀️</p>
 
                     <label class="toggle" for="my-toggle">
-                        <input class="toggle__input" type="checkbox" id="my-toggle">
-                        <div class="toggle__fill"></div>
+                        <input class="toggle-input" type="checkbox" id="my-toggle">
+                        <div class="toggle-fill"></div>
                     </label>
 
                     <p>🌑</p>
@@ -61,25 +61,42 @@
 
                 <button id="create-task-btn">Create Task +</button>
 
+                <div class="mobile-header-controls">
+
+                   <button id="create-task-btn-mobile">+</button>
+    
+                    <div class="mobile-switch" id="mobile-switch-btn">
+                       <p>☀️</p>
+                       <label class="toggle" for="mobile-toggle">
+                           <input class="toggle-input" type="checkbox" id="mobile-toggle">
+                           <div class="toggle-fill"></div>
+                       </label>
+                       <p>🌑</p>
+                    </div>
+
+                </div>
+
             </div>
+
+
 
             <div class="content-section">
 
                 <div  id="todo-column" class="to-do">
 
-                    <h4>TODO (4)</h4>
+                    <h4>TODO</h4>
 
                 </div>
 
                 <div id="doing-column" class="doing">
 
-                    <h4>DOING (3)</h4>
+                    <h4>DOING</h4>
 
                 </div>
 
                 <div id="done-column" class="done">
 
-                    <h4>DONE (3)</h4>
+                    <h4>DONE</h4>
 
                 </div>
 

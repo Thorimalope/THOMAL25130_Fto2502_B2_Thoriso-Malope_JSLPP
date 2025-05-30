@@ -71,6 +71,14 @@ addNewTaskButton.addEventListener("click", function () {
     console.log("Create new task?");
 })
 
+// Mobile Create new task button
+
+const mobileNewTaskButton = document.getElementById("create-task-btn-mobile");
+
+mobileNewTaskButton.addEventListener("click", function () {
+  addTaskModal.style.display = "flex";
+})
+
 // Functions to save the new task and add it to the board
 
 const newTaskBtn = document.getElementById("new-task-btn");
@@ -116,11 +124,6 @@ async function apiData() {
 }
 
 window.addEventListener("DOMContentLoaded", apiData);
-
-
-/*document.addEventListener("DOMContentLoaded", () => {
-  loadTaskFromLocalStorage();
-});*/
 
 
 // Saving an edit
@@ -182,10 +185,19 @@ deleteButton.addEventListener("click", function () {
 // Toggle Theme function
 
 const toggleButton = document.getElementById("my-toggle");
+const mobileToggleButton = document.getElementById("mobile-toggle");
 const projectBody = document.getElementById("body");
 
 toggleButton.addEventListener("change", function () {
   if (toggleButton.checked) {
+    body.classList.add("dark-theme");
+  } else {
+    body.classList.remove("dark-theme");
+  }
+})
+
+mobileToggleButton.addEventListener("change", function () {
+    if (mobileToggleButton.checked) {
     body.classList.add("dark-theme");
   } else {
     body.classList.remove("dark-theme");
