@@ -46,16 +46,30 @@ body.dark-theme {
 
 body{
     background: var(--bg-body);
+    position: relative;
 }
 
 .container-1{
     display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 .nav-bar{
     background: var(--bg-sidebar);
     height: 1024px;
     width: 300px;
+}
+
+.nav-bar.hidden {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-bar.show {
+    transform: translateX();
+    transition: transform 0.3s ease;
 }
 
 .nav-bar h1{
@@ -86,7 +100,7 @@ body{
 .header-section{
     background: var(--bg-header);
     height: 96px;
-    width: 1220px;
+    width: 100vw;
     display: flex;
     gap: 800px;
 }
@@ -121,7 +135,17 @@ body{
 .main-section{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    transition: transform 0.3s ease;
 }
+
+.main-section.shift-left {
+  transform: translateX(-300px);
+}
+
+/*.main-section.shift-right {
+  transform: translateX(0px);
+}*/
 
 .content-section{
     display: flex;
@@ -472,6 +496,55 @@ body{
 .toggle__input:checked ~.toggle__fill::after{
     transform: translateX(20px);
 }
+
+/* Hide Sidebar Button */
+
+.hide-btn{
+    width: 276px;
+    height: 48px;
+    background: var(--bg-switch);
+    border: none;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    font-family: plus jakarta sans;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-cardHeader);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.show-btn{
+    position: fixed;
+    bottom: 1.5rem;
+    left: 0;
+    transform: translateX(-100%);
+    width: 56px;
+    height: 46px;
+    background: var(--bg-switch);
+    border: none;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.show-btn.visible{
+    transform: translateX(0);
+}
+
+/*.logo{
+    width: 20px;
+    height: 24px;
+}*/
 
 /* Media Queries */
 

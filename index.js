@@ -191,3 +191,23 @@ toggleButton.addEventListener("change", function () {
     body.classList.remove("dark-theme");
   }
 })
+
+// Sidebar Hide and show
+
+const sidebar = document.querySelector('.nav-bar');
+const showButton = document.querySelector('.show-btn');
+const hideButton = document.querySelector('.hide-btn');
+const mainSection = document.querySelector('.main-section');
+
+hideButton.addEventListener("click", function () {
+    sidebar.classList.add('hidden');
+   showButton.classList.add('visible');
+   mainSection.classList.toggle("shift-left");
+})
+
+showButton.addEventListener("click", function () {
+   sidebar.classList.add("show")
+    sidebar.classList.remove('hidden');
+   showButton.classList.remove('visible');
+   mainSection.classList.toggle("shift-left");
+})
